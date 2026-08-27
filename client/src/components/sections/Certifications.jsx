@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { cvData } from '../../config/cvData.js';
+import { FaCertificate } from 'react-icons/fa';
 
 const Certifications = () => {
   return (
@@ -8,12 +9,32 @@ const Certifications = () => {
       <h2 className="text-3xl font-bold mb-10 text-white">Certifications</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {cvData.certifications.map((cert, index) => (
-          <div key={index} className="bg-white/[0.02] backdrop-blur-xl border border-white/10 hover:bg-white/[0.04] hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.2)] transition-all duration-500 rounded-2xl p-6">
-            <h3 className="text-xl font-bold text-white mb-2">{cert.name}</h3>
-            <p className="text-slate-300 font-medium">{cert.issuer}</p>
-            {cert.duration && (
-              <p className="text-neutral-500 mt-2 text-sm">{cert.duration}</p>
+          <div key={index} className="bg-white/[0.02] backdrop-blur-xl border border-white/10 hover:bg-white/[0.04] hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.2)] transition-all duration-500 rounded-2xl overflow-hidden flex flex-col">
+            
+            {cert.image && (
+              <div className="relative w-full h-48 bg-slate-800/50 flex items-center justify-center border-b border-white/10">
+                <span className="text-slate-500 font-medium flex flex-col items-center gap-2">
+                  <FaCertificate className="text-3xl text-slate-600" />
+                  Certificate Image
+                </span>
+                <img
+                  src={cert.image}
+                  alt={cert.name}
+                  className="absolute inset-0 w-full h-full object-cover hidden"
+                  onError={(e) => e.target.style.display = 'none'}
+                  onLoad={(e) => e.target.style.display = 'block'}
+                />
+              </div>
             )}
+            
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-white mb-2">{cert.name}</h3>
+              <p className="text-slate-300 font-medium">{cert.issuer}</p>
+              {cert.duration && (
+                <p className="text-neutral-500 mt-2 text-sm">{cert.duration}</p>
+              )}
+            </div>
+            
           </div>
         ))}
       </div>

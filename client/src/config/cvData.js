@@ -43,12 +43,14 @@ export const cvData = {
   certifications: [
     {
       name: "MERN Stack Development",
-      issuer: "O7 Services"
+      issuer: "O7 Services",
+      image: "/cert-mern.png"
     },
     {
       name: "Python Programming",
       issuer: "GTB Institution",
-      duration: "45-day"
+      duration: "45-day",
+      image: "/cert-python.png"
     }
   ],
   education: [
