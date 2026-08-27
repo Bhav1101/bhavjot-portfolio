@@ -7,6 +7,7 @@ import Experience from './components/sections/Experience.jsx';
 import Projects from './components/sections/Projects.jsx';
 import Certifications from './components/sections/Certifications.jsx';
 import Education from './components/sections/Education.jsx';
+import Contact from './components/sections/Contact.jsx';
 import { cvData } from './config/cvData.js';
 
 function App() {
@@ -26,9 +27,7 @@ function App() {
 
       <Education />
 
-      <section id="contact" className="py-20">
-        <h2 className="text-2xl font-semibold mb-6">Contact Placeholder</h2>
-      </section>
+      <Contact />
     </Layout>
   );
 }
