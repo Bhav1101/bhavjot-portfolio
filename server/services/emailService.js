@@ -17,7 +17,6 @@ export const sendContactEmail = async (messageData) => {
       text: `
         Name: ${messageData.name}
         Email: ${messageData.email}
-        Budget: ${messageData.budget || 'N/A'}
         Message: ${messageData.message}
       `,
     };

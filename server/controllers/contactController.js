@@ -3,19 +3,18 @@ import { sendContactEmail } from '../services/emailService.js';
 
 export const submitContact = async (req, res) => {
   try {
-    const { name, email, budget, message } = req.body;
+    const { name, email, message } = req.body;
 
     const newMessage = new ContactMessage({
       name,
       email,
-      budget,
       message,
     });
 
     await newMessage.save();
 
     // Send email asynchronously
-    sendContactEmail({ name, email, budget, message });
+    sendContactEmail({ name, email, message });
 
     res.status(201).json({ success: true, message: 'Message received' });
   } catch (error) {
