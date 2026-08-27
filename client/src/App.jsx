@@ -5,6 +5,8 @@ import Stats from './components/sections/Stats.jsx';
 import Skills from './components/sections/Skills.jsx';
 import Experience from './components/sections/Experience.jsx';
 import Projects from './components/sections/Projects.jsx';
+import Certifications from './components/sections/Certifications.jsx';
+import Education from './components/sections/Education.jsx';
 import { cvData } from './config/cvData.js';
 
 function App() {
@@ -20,13 +22,9 @@ function App() {
 
       <Projects />
 
-      <section id="certifications" className="py-20 border-b border-neutral-800">
-        <h2 className="text-2xl font-semibold mb-6">Certifications Placeholder</h2>
-      </section>
+      <Certifications />
 
-      <section id="education" className="py-20 border-b border-neutral-800">
-        <h2 className="text-2xl font-semibold mb-6">Education Placeholder</h2>
-      </section>
+      <Education />
 
       <section id="contact" className="py-20">
         <h2 className="text-2xl font-semibold mb-6">Contact Placeholder</h2>
