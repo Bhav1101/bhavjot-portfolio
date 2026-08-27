@@ -5,7 +5,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    budget: ''
   });
   const [status, setStatus] = useState({ type: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -34,7 +35,7 @@ const Contact = () => {
 
       if (response.ok) {
         setStatus({ type: 'success', message: 'Message sent successfully!' });
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '', message: '', budget: '' });
       } else {
         const errorData = await response.json();
         setStatus({ type: 'error', message: errorData.message || 'Failed to send message.' });
@@ -93,6 +94,22 @@ const Contact = () => {
                 placeholder="xyz@gmail.com"
               />
             </div>
+          </div>
+
+          <div>
+            <label htmlFor="budget" className="block text-sm font-medium mb-2 text-slate-300">Project Budget</label>
+            <select
+              id="budget"
+              name="budget"
+              value={formData.budget}
+              onChange={handleChange}
+              className="w-full px-4 py-3 rounded-lg border border-slate-700 bg-slate-800 text-white focus:ring-2 focus:ring-indigo-500 outline-none transition-colors"
+            >
+              <option value="">Select a budget range (optional)</option>
+              <option value="$0 - $1,000">$0 - $1,000</option>
+              <option value="$1,000 - $5,000">$1,000 - $5,000</option>
+              <option value="$5,000+">$5,000+</option>
+            </select>
           </div>
 
           <div>
