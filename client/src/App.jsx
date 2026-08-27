@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from './components/layout/Layout.jsx';
 import Hero from './components/sections/Hero.jsx';
 import Stats from './components/sections/Stats.jsx';
+import Skills from './components/sections/Skills.jsx';
 import { cvData } from './config/cvData.js';
 
 function App() {
@@ -11,9 +12,7 @@ function App() {
       
       <Stats />
 
-      <section id="skills" className="py-20 border-b border-neutral-800">
-        <h2 className="text-2xl font-semibold mb-6">Skills Placeholder</h2>
-      </section>
+      <Skills />
 
       <section id="experience" className="py-20 border-b border-neutral-800">
         <h2 className="text-2xl font-semibold mb-6">Experience Placeholder</h2>
