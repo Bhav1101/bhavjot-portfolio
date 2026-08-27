@@ -1,16 +1,12 @@
-﻿import React from 'react';
+import React from 'react';
 import Layout from './components/layout/Layout.jsx';
+import Hero from './components/sections/Hero.jsx';
 import { cvData } from './config/cvData.js';
 
 function App() {
   return (
     <Layout>
-      <section id="hero" className="min-h-screen flex items-center border-b border-neutral-800">
-        <div>
-          <h1 className="text-4xl font-bold">{cvData.hero.name}</h1>
-          <p className="text-xl text-neutral-400 mt-2">{cvData.hero.title}</p>
-        </div>
-      </section>
+      <Hero />
       
       <section id="stats" className="py-20 border-b border-neutral-800">
         <h2 className="text-2xl font-semibold mb-6">Stats Placeholder</h2>
