@@ -57,7 +57,7 @@ const Hero = () => {
               Get in Touch
             </a>
             <a
-              href="/Bhavjot_Singh_CV.pdf"
+              href="/Bhavjot_Singh_CV.pdf.docx"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-white text-slate-900 font-semibold rounded-full hover:bg-slate-200 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.4)]"
