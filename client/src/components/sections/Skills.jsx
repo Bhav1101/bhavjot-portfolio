@@ -40,7 +40,7 @@ const Skills = () => {
         {Object.entries(cvData.skills)
           .filter(([category]) => category !== 'softSkills')
           .map(([category, items]) => (
-          <div key={category} className="bg-slate-900/50 backdrop-blur-sm border border-slate-800/80 p-6 rounded-2xl shadow-lg">
+          <div key={category} className="bg-white/[0.02] backdrop-blur-xl border border-white/10 hover:bg-white/[0.04] hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.2)] transition-all duration-500 rounded-2xl p-6 shadow-xl">
             <h3 className="text-xl font-semibold mb-6 text-white capitalize">
               {category.replace(/([A-Z])/g, ' $1').trim()}
             </h3>
@@ -61,7 +61,7 @@ const Skills = () => {
       <h2 className="text-3xl font-bold mt-20 mb-10 text-white">Soft Skills</h2>
       <div className="flex flex-wrap gap-4">
         {cvData.skills.softSkills.map((skill, index) => (
-          <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-slate-800/80 px-6 py-4 rounded-2xl shadow-lg flex items-center gap-3 text-slate-300 font-medium hover:bg-slate-800/50 transition-colors">
+          <div key={index} className="bg-white/[0.02] backdrop-blur-xl border border-white/10 hover:bg-white/[0.04] hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.2)] transition-all duration-500 rounded-2xl px-6 py-4 flex items-center gap-3 text-slate-300 font-medium">
             <span className="text-2xl">
               {iconMap[skill] || <span className="w-2 h-2 bg-slate-600 rounded-full inline-block"></span>}
             </span>

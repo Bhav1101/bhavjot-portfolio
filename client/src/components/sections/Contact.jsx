@@ -56,7 +56,7 @@ const Contact = () => {
       viewport={{ once: true, amount: 0.2 }} 
       transition={{ duration: 0.5 }}
     >
-      <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm rounded-3xl border border-slate-800 shadow-xl pointer-events-none"></div>
+      <div className="absolute inset-0 bg-white/[0.02] backdrop-blur-xl border border-white/10 shadow-2xl pointer-events-none rounded-3xl"></div>
       <div className="max-w-2xl mx-auto relative z-10 p-8 md:p-12">
         <div className="text-center mb-10">
           <h2 className="text-4xl font-extrabold mb-4 text-white">Let's connect</h2>

@@ -52,7 +52,7 @@ const Hero = () => {
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mt-2">
             <a
               href="#contact"
-              className="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-indigo-600/30"
+              className="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-[0_0_20px_rgba(99,102,241,0.4)] hover:shadow-[0_0_30px_rgba(99,102,241,0.6)]"
             >
               Get in Touch
             </a>
@@ -60,7 +60,7 @@ const Hero = () => {
               href="/cv.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-white text-slate-900 font-semibold rounded-full hover:bg-slate-200 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-white/10"
+              className="px-8 py-3 bg-white text-slate-900 font-semibold rounded-full hover:bg-slate-200 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.4)]"
             >
               Download CV
             </a>
