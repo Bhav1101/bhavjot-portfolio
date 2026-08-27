@@ -1,4 +1,9 @@
 import express from 'express';
+import dns from 'dns';
+
+// Force IPv4 for Node 17+ (Fixes Nodemailer ENETUNREACH on Render/IPv6)
+dns.setDefaultResultOrder('ipv4first');
+
 import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
