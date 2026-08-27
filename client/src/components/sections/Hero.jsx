@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { cvData } from '../../config/cvData.js';
-import { SiGithub, SiLinkedin } from 'react-icons/si';
+import { SiGithub } from 'react-icons/si';
+import { FaLinkedin } from 'react-icons/fa';
 import { HiMail } from 'react-icons/hi';
 
 const Hero = () => {
@@ -64,7 +65,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-indigo-600/30"
             >
-              <SiLinkedin className="text-xl" />
+              <FaLinkedin className="text-xl" />
               LinkedIn
             </a>
             <a
