@@ -77,7 +77,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-3 rounded-lg border border-slate-700 bg-slate-800 text-white focus:ring-2 focus:ring-indigo-500 outline-none transition-colors"
-                placeholder="John Doe"
+                placeholder="Name"
               />
             </div>
             <div>
@@ -90,7 +90,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-3 rounded-lg border border-slate-700 bg-slate-800 text-white focus:ring-2 focus:ring-indigo-500 outline-none transition-colors"
-                placeholder="john@example.com"
+                placeholder="xyz@gmail.com"
               />
             </div>
           </div>
@@ -105,7 +105,7 @@ const Contact = () => {
               required
               rows="5"
               className="w-full px-4 py-3 rounded-lg border border-slate-700 bg-slate-800 text-white focus:ring-2 focus:ring-indigo-500 outline-none transition-colors resize-none"
-              placeholder="Hi, I think we need a design system for our products..."
+              placeholder="Message"
             ></textarea>
           </div>
 
