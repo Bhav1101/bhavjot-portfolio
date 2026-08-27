@@ -2,7 +2,7 @@ export const cvData = {
   hero: {
     name: "Bhavjot Singh",
     title: "Aspiring Software Development Engineer | AppSec & VAPT",
-    bio: "I am a passionate B.Tech CSE student dedicated to crafting robust web applications and exploring the depths of Application Security (AppSec) and Vulnerability Assessment and Penetration Testing (VAPT). With a strong foundation in the MERN stack and a relentless curiosity for cybersecurity, I strive to build secure, scalable, and user-centric digital solutions.",
+    bio: "I am a passionate B.Tech CSE student and aspiring Software Development Engineer dedicated to crafting robust web applications while exploring the depths of Application Security (AppSec) and Vulnerability Assessment and Penetration Testing (VAPT). With a strong foundation in the MERN stack and a relentless curiosity for cybersecurity, I strive to build secure, scalable, and user-centric digital solutions. I have hands-on experience developing comprehensive production-ready applications, such as SportsSphere, where I focus not just on seamless user experiences, but on secure architectures and robust API integrations. I am constantly learning and adapting to new technologies to bridge the gap between innovative software development and uncompromising security.",
     github: "https://github.com/Bhav1101",
     linkedin: "https://linkedin.com/in/bhavjot-singh-933849336",
     email: "Bhavjot360@gmail.com",
