@@ -38,7 +38,7 @@ const Hero = () => {
             LinkedIn
           </a>
           <a
-            href={mailto:$email}
+            href={`mailto:${email}`}
             className="px-6 py-3 border border-neutral-700 text-white font-semibold rounded-lg hover:bg-neutral-800 transition-colors"
           >
             Email
