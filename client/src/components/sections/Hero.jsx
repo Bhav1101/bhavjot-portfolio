@@ -26,7 +26,7 @@ const Hero = () => {
   return (
     <motion.section 
       id="hero" 
-      className="min-h-[90vh] flex items-center py-20 border-b border-slate-800/50"
+      className="min-h-[90vh] flex items-center py-20 border-b border-slate-800/50 scroll-mt-24"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"

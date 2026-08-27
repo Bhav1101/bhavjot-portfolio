@@ -50,7 +50,7 @@ const Contact = () => {
   return (
     <motion.section 
       id="contact" 
-      className="py-20 mb-20 relative" 
+      className="py-20 mb-20 relative scroll-mt-24" 
       initial={{ opacity: 0, y: 30 }} 
       whileInView={{ opacity: 1, y: 0 }} 
       viewport={{ once: true, amount: 0.2 }} 

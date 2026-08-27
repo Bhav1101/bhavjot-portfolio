@@ -4,7 +4,7 @@ import { cvData } from '../../config/cvData.js';
 
 const Projects = () => {
   return (
-    <motion.section id="projects" className="py-20 border-b border-neutral-800" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5 }}>
+    <motion.section id="projects" className="py-20 border-b border-neutral-800 scroll-mt-24" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5 }}>
       <h2 className="text-3xl font-bold mb-10 text-white">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {cvData.projects.map((project, index) => (

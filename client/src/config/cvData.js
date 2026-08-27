@@ -15,7 +15,7 @@ export const cvData = {
   skills: {
     languages: ["JavaScript", "TypeScript", "Python"],
     webStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-    tools: ["Git", "GitHub", "Vite", "Framer Motion", "JWT", "Razorpay", "Cloudinary"],
+    tools: ["Git", "GitHub", "Postman", "Dev-C++", "Cisco Packet Tracer", "Razorpay", "Cloudinary"],
     softSkills: ["Communication", "Problem Solving", "Teamwork", "Adaptability"]
   },
   experience: [
