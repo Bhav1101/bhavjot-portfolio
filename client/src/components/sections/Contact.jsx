@@ -5,7 +5,6 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    budget: '',
     message: ''
   });
   const [status, setStatus] = useState({ type: '', message: '' });
@@ -35,7 +34,7 @@ const Contact = () => {
 
       if (response.ok) {
         setStatus({ type: 'success', message: 'Message sent successfully!' });
-        setFormData({ name: '', email: '', budget: '', message: '' });
+        setFormData({ name: '', email: '', message: '' });
       } else {
         const errorData = await response.json();
         setStatus({ type: 'error', message: errorData.message || 'Failed to send message.' });
@@ -49,19 +48,27 @@ const Contact = () => {
   };
 
   return (
-    <motion.section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900 rounded-3xl p-8 md:p-12 mb-20 shadow-sm border border-gray-100 dark:border-gray-800" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5 }}>
-      <div className="max-w-2xl mx-auto">
+    <motion.section 
+      id="contact" 
+      className="py-20 mb-20 relative" 
+      initial={{ opacity: 0, y: 30 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      viewport={{ once: true, amount: 0.2 }} 
+      transition={{ duration: 0.5 }}
+    >
+      <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm rounded-3xl border border-slate-800 shadow-xl pointer-events-none"></div>
+      <div className="max-w-2xl mx-auto relative z-10 p-8 md:p-12">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold mb-4">Let's work together</h2>
-          <p className="text-gray-600 dark:text-gray-400">
-            I'm currently available for freelance work or full-time roles. If you have a project that you want to get started, think you need my help with something or just fancy saying hey, then get in touch.
+          <h2 className="text-4xl font-extrabold mb-4 text-white">Let's connect</h2>
+          <p className="text-slate-400">
+            I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
           </p>
         </div>
 
         <form onSubmit={onSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Name</label>
+              <label htmlFor="name" className="block text-sm font-medium mb-2 text-slate-300">Name</label>
               <input
                 type="text"
                 id="name"
@@ -69,12 +76,12 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none transition-colors"
+                className="w-full px-4 py-3 rounded-lg border border-slate-700 bg-slate-800 text-white focus:ring-2 focus:ring-indigo-500 outline-none transition-colors"
                 placeholder="John Doe"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Email</label>
+              <label htmlFor="email" className="block text-sm font-medium mb-2 text-slate-300">Email</label>
               <input
                 type="email"
                 id="email"
@@ -82,45 +89,28 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none transition-colors"
+                className="w-full px-4 py-3 rounded-lg border border-slate-700 bg-slate-800 text-white focus:ring-2 focus:ring-indigo-500 outline-none transition-colors"
                 placeholder="john@example.com"
               />
             </div>
           </div>
 
           <div>
-            <label htmlFor="budget" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Budget (Optional)</label>
-            <select
-              id="budget"
-              name="budget"
-              value={formData.budget}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none transition-colors"
-            >
-              <option value="">Select a budget</option>
-              <option value="< $1k">Less than $1k</option>
-              <option value="$1k - $5k">$1k - $5k</option>
-              <option value="$5k - $10k">$5k - $10k</option>
-              <option value="> $10k">More than $10k</option>
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Message</label>
+            <label htmlFor="message" className="block text-sm font-medium mb-2 text-slate-300">Message</label>
             <textarea
               id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
               required
-              rows="4"
-              className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none transition-colors resize-none"
-              placeholder="Tell me about your project..."
+              rows="5"
+              className="w-full px-4 py-3 rounded-lg border border-slate-700 bg-slate-800 text-white focus:ring-2 focus:ring-indigo-500 outline-none transition-colors resize-none"
+              placeholder="Hi, I think we need a design system for our products..."
             ></textarea>
           </div>
 
           {status.message && (
-            <div className={`p-4 rounded-lg text-sm font-medium ${status.type === 'success' ? 'bg-green-50 text-green-800 dark:bg-green-900/30 dark:text-green-400' : 'bg-red-50 text-red-800 dark:bg-red-900/30 dark:text-red-400'}`}>
+            <div className={`p-4 rounded-lg text-sm font-medium ${status.type === 'success' ? 'bg-emerald-900/30 text-emerald-400 border border-emerald-800' : 'bg-red-900/30 text-red-400 border border-red-800'}`}>
               {status.message}
             </div>
           )}
@@ -128,7 +118,7 @@ const Contact = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full py-3 px-6 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 disabled:opacity-70 disabled:cursor-not-allowed"
+            className="w-full py-3 px-6 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold transition-all hover:scale-[1.02] active:scale-95 disabled:opacity-70 disabled:pointer-events-none shadow-lg shadow-indigo-600/20"
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>

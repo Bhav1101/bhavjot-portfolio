@@ -1,8 +1,8 @@
-﻿export const cvData = {
+export const cvData = {
   hero: {
     name: "Bhavjot Singh",
     title: "Aspiring Software Development Engineer | AppSec & VAPT",
-    bio: "Passionate B.Tech CSE student focused on web development, AppSec, and VAPT.",
+    bio: "I am a passionate B.Tech CSE student dedicated to crafting robust web applications and exploring the depths of Application Security (AppSec) and Vulnerability Assessment and Penetration Testing (VAPT). With a strong foundation in the MERN stack and a relentless curiosity for cybersecurity, I strive to build secure, scalable, and user-centric digital solutions.",
     github: "https://github.com/Bhav1101",
     linkedin: "https://linkedin.com/in/bhavjot-singh-933849336",
     email: "Bhavjot360@gmail.com",
@@ -15,7 +15,8 @@
   skills: {
     languages: ["JavaScript", "TypeScript", "Python"],
     webStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-    tools: ["Git", "GitHub", "Vite", "Framer Motion", "JWT", "Razorpay", "Cloudinary"]
+    tools: ["Git", "GitHub", "Vite", "Framer Motion", "JWT", "Razorpay", "Cloudinary"],
+    softSkills: ["Communication", "Problem Solving", "Teamwork", "Adaptability"]
   },
   experience: [
     {

@@ -49,12 +49,29 @@ const Hero = () => {
             {bio}
           </motion.p>
 
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mt-2">
+            <a
+              href="#contact"
+              className="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-indigo-600/30"
+            >
+              Get in Touch
+            </a>
+            <a
+              href="/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-white text-slate-900 font-semibold rounded-full hover:bg-slate-200 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-white/10"
+            >
+              Download CV
+            </a>
+          </motion.div>
+
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mt-4">
             <a
               href={github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-white text-slate-900 font-semibold rounded-full hover:bg-slate-200 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-white/10"
+              className="flex items-center gap-2 px-6 py-3 bg-slate-800 text-slate-200 font-semibold rounded-full hover:bg-slate-700 transition-all shadow-lg"
             >
               <SiGithub className="text-xl" />
               GitHub
@@ -63,14 +80,14 @@ const Hero = () => {
               href={linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-indigo-600/30"
+              className="flex items-center gap-2 px-6 py-3 bg-[#0a66c2] text-white font-semibold rounded-full hover:bg-[#004182] transition-all shadow-lg"
             >
               <FaLinkedin className="text-xl" />
               LinkedIn
             </a>
             <a
               href={`mailto:${email}`}
-              className="flex items-center gap-2 px-6 py-3 border-2 border-slate-700 text-slate-200 font-semibold rounded-full hover:bg-slate-800 hover:border-slate-600 transition-all hover:scale-105 active:scale-95"
+              className="flex items-center gap-2 px-6 py-3 border border-slate-700 text-slate-200 font-semibold rounded-full hover:bg-slate-800 transition-all"
             >
               <HiMail className="text-xl" />
               Email

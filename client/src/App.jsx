@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from './components/layout/Layout.jsx';
 import Hero from './components/sections/Hero.jsx';
-import Stats from './components/sections/Stats.jsx';
 import Skills from './components/sections/Skills.jsx';
 import Experience from './components/sections/Experience.jsx';
 import Projects from './components/sections/Projects.jsx';
@@ -15,8 +14,6 @@ function App() {
     <Layout>
       <Hero />
       
-      <Stats />
-
       <Skills />
 
       <Experience />
