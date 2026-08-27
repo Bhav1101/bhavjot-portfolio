@@ -13,8 +13,8 @@ export const cvData = {
     { label: "Diploma CGPA", value: "9.08" }
   ],
   skills: {
-    languages: ["JavaScript", "TypeScript", "Python"],
-    webStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    languages: ["JavaScript", "Python", "C++"],
+    webStack: ["React", "Node.js", "Express", "MongoDB"],
     tools: ["Git", "GitHub", "Postman", "Dev-C++", "Cisco Packet Tracer", "Razorpay", "Cloudinary"],
     softSkills: ["Communication", "Problem Solving", "Teamwork", "Adaptability"]
   },

@@ -23,6 +23,7 @@ const iconMap = {
   "Razorpay": <SiRazorpay className="text-blue-600" />,
   "Cloudinary": <SiCloudinary className="text-blue-400" />,
   "Postman": <SiPostman className="text-orange-500" />,
+  "C++": <SiCplusplus className="text-blue-600" />,
   "Dev-C++": <SiCplusplus className="text-blue-600" />,
   "Cisco Packet Tracer": <SiCisco className="text-cyan-500" />,
   "Teamwork": <FaHandshake className="text-yellow-500" />,
