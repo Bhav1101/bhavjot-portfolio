@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -48,7 +49,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900 rounded-3xl p-8 md:p-12 mb-20 shadow-sm border border-gray-100 dark:border-gray-800">
+    <motion.section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900 rounded-3xl p-8 md:p-12 mb-20 shadow-sm border border-gray-100 dark:border-gray-800" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5 }}>
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold mb-4">Let's work together</h2>
@@ -133,7 +134,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

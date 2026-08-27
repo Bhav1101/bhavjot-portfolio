@@ -1,11 +1,12 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { cvData } from '../../config/cvData.js';
 
 const Hero = () => {
   const { name, title, bio, github, linkedin, email } = cvData.hero;
 
   return (
-    <section id="hero" className="min-h-screen flex items-center py-20 border-b border-neutral-800">
+    <motion.section id="hero" className="min-h-screen flex items-center py-20 border-b border-neutral-800" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5 }}>
       <div className="flex flex-col gap-6">
         <div>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
@@ -45,7 +46,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

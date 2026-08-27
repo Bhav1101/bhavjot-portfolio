@@ -1,9 +1,10 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { cvData } from '../../config/cvData.js';
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 border-b border-neutral-800">
+    <motion.section id="experience" className="py-20 border-b border-neutral-800" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5 }}>
       <h2 className="text-3xl font-bold mb-10 text-white">Experience</h2>
       <div className="flex flex-col gap-10">
         {cvData.experience.map((exp, index) => (
@@ -26,7 +27,7 @@ const Experience = () => {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

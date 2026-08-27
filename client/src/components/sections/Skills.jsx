@@ -1,9 +1,10 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { cvData } from '../../config/cvData.js';
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 border-b border-neutral-800">
+    <motion.section id="skills" className="py-20 border-b border-neutral-800" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5 }}>
       <h2 className="text-3xl font-bold mb-10 text-white">Skills</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {Object.entries(cvData.skills).map(([category, items]) => (
@@ -22,7 +23,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
