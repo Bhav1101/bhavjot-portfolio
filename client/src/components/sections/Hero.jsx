@@ -106,26 +106,34 @@ const Hero = () => {
                  <span className="text-blue-400 font-bold">$</span> whoami --details
               </motion.div>
               <motion.div
-                 initial={{ opacity: 0 }}
-                 whileInView={{ opacity: 1 }}
-                 transition={{ delay: 1, duration: 1 }}
-                 className="text-slate-300"
+                 initial="hidden"
+                 whileInView="visible"
+                 viewport={{ once: true }}
+                 variants={{
+                   hidden: { opacity: 0 },
+                   visible: { opacity: 1, transition: { delayChildren: 1.2, staggerChildren: 0.5 } }
+                 }}
+                 className="text-slate-300 font-mono text-sm md:text-base leading-loose whitespace-pre-wrap"
               >
-                <pre className="whitespace-pre-wrap font-mono text-sm md:text-base leading-loose">
-{`{
-  "name": "Bhavjot Singh",
-  "role": "Aspiring Software Development Engineer",
-  "focus": ["AppSec", "VAPT", "Full Stack"],
-  "education": "B.Tech CSE Lateral Entry @ LPU",
-  "stack": ["React", "Node.js", "Express", "MongoDB"],
-  "hobbies": ["Cybersecurity", "Problem Solving", "Open Source"]
-}`}
-                </pre>
+                <div>{'{'}</div>
+                {[
+                  `  "name": "Bhavjot Singh",`,
+                  `  "role": "Aspiring Software Development Engineer",`,
+                  `  "focus": ["AppSec", "VAPT", "Full Stack"],`,
+                  `  "education": "B.Tech CSE Lateral Entry @ LPU",`,
+                  `  "stack": ["React", "Node.js", "Express", "MongoDB"],`,
+                  `  "hobbies": ["Cybersecurity", "Problem Solving", "Open Source"]`
+                ].map((line, i) => (
+                  <motion.div key={i} variants={{ hidden: { opacity: 0, y: 5 }, visible: { opacity: 1, y: 0 } }}>
+                    {line}
+                  </motion.div>
+                ))}
+                <div>{'}'}</div>
               </motion.div>
               <motion.div
                  initial={{ opacity: 0 }}
                  whileInView={{ opacity: 1 }}
-                 transition={{ delay: 2.5 }}
+                 transition={{ delay: 4.5 }}
               >
                 <span className="text-blue-400 font-bold">$</span> 
                 <motion.div 
