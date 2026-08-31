@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
         <div className="absolute bottom-[-20%] left-[20%] w-[500px] h-[500px] bg-emerald-600/20 rounded-full mix-blend-screen filter blur-[120px] animate-blob animation-delay-4000"></div>
       </div>
       
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10 pt-24">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10 pt-24">
         {children}
       </main>
     </div>
