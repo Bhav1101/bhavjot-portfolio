@@ -34,14 +34,9 @@ const Hero = () => {
     >
       <div className="flex flex-col gap-16 w-full max-w-5xl mx-auto">
         
-        {/* Top Block: Profile Picture & Text */}
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-10 w-full">
-          {/* Larger Profile Picture */}
-          <motion.div variants={itemVariants} className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-indigo-500/50 shadow-[0_0_30px_rgba(99,102,241,0.6)] shrink-0 relative group">
-             <div className="absolute inset-0 bg-indigo-500/20 group-hover:bg-transparent transition-all duration-300"></div>
-             <img src="/profile.png" alt="Bhavjot Singh" className="w-full h-full object-cover bg-slate-800 group-hover:scale-105 transition-transform duration-500" />
-          </motion.div>
-
+        {/* Top Block: Text & Profile Picture */}
+        <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-8 w-full justify-between">
+          
           {/* Text Content */}
           <div className="flex-1 flex flex-col gap-6 text-center md:text-left items-center md:items-start">
             <motion.div variants={itemVariants}>
@@ -80,6 +75,13 @@ const Hero = () => {
               <a href={`mailto:${email}`} className="flex items-center gap-2 px-5 py-2.5 border border-slate-700 text-slate-200 font-semibold rounded-full hover:bg-slate-800 transition-all"><HiMail className="text-lg" /> Email</a>
             </motion.div>
           </div>
+
+          {/* Larger Standalone Profile Picture on Right */}
+          <motion.div variants={itemVariants} className="w-56 h-56 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-500/50 shadow-[0_0_40px_rgba(99,102,241,0.4)] shrink-0 relative group flex justify-center items-center">
+             <div className="absolute inset-0 bg-indigo-500/20 group-hover:bg-transparent transition-all duration-300"></div>
+             <img src="/profile.png" alt="Bhavjot Singh" className="w-full h-full object-cover bg-slate-800 group-hover:scale-105 transition-transform duration-500" />
+          </motion.div>
+
         </div>
 
         {/* Next Block: Terminal Bio */}
