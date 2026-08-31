@@ -25,13 +25,15 @@ const Certifications = () => {
                   Certificate Document
                 </span>
                 {cert.image && (
-                  <img
-                    src={cert.image}
-                    alt={cert.name}
-                    className="absolute inset-0 w-full h-full object-cover hidden"
-                    onError={(e) => e.target.style.display = 'none'}
-                    onLoad={(e) => e.target.style.display = 'block'}
-                  />
+                  <div className="absolute inset-0 w-full h-full bg-slate-900">
+                    <img
+                      src={cert.image}
+                      alt={cert.name}
+                      className="absolute inset-0 w-full h-full object-cover hidden opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 mix-blend-screen hover:mix-blend-normal"
+                      onError={(e) => e.target.parentElement.style.display = 'none'}
+                      onLoad={(e) => e.target.style.display = 'block'}
+                    />
+                  </div>
                 )}
               </div>
             )}
