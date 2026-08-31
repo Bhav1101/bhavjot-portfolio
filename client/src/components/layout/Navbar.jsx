@@ -30,9 +30,6 @@ const Navbar = () => {
             {link.name}
           </a>
         ))}
-        <button onClick={toggleTheme} className="ml-4 p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-800 dark:text-slate-300">
-          {theme === 'dark' ? <FaSun size={18} /> : <FaMoon size={18} />}
-        </button>
       </div>
     </nav>
   );

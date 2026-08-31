@@ -73,16 +73,49 @@ const Skills = () => {
       </div>
 
       {/* Marquee / Static Display */}
-      <div className="relative overflow-hidden w-full rounded-2xl glass p-8">
+      <div className="relative overflow-hidden w-full py-4">
         {activeFilter === 'All' ? (
-          <div className="flex w-full overflow-hidden">
+          <div className="flex flex-col gap-6 w-full overflow-hidden">
+            {/* Line 1 */}
             <motion.div
               className="flex gap-6 pr-6 w-max"
               animate={{ x: ["0%", "-50%"] }}
-              transition={{ repeat: Infinity, ease: "linear", duration: 30 }}
+              transition={{ repeat: Infinity, ease: "linear", duration: 80 }}
             >
-              {[...allSkills, ...allSkills, ...allSkills, ...allSkills].map((skill, idx) => (
-                <div key={idx} className="flex-shrink-0 flex items-center gap-3 bg-white/[0.05] border border-white/10 rounded-xl px-6 py-4 shadow-lg hover:border-indigo-500/50 hover:bg-white/[0.1] transition-colors">
+              {[...allSkills, ...allSkills, ...allSkills].map((skill, idx) => (
+                <div key={`l1-${idx}`} className="flex-shrink-0 flex items-center gap-3 bg-white/[0.05] border border-white/10 rounded-xl px-6 py-4 shadow-lg hover:border-indigo-500/50 hover:bg-white/[0.1] transition-colors">
+                  <span className="text-3xl text-slate-800 dark:text-white">
+                    {iconMap[skill] || <span className="w-2 h-2 bg-slate-600 rounded-full inline-block"></span>}
+                  </span>
+                  <span className="text-slate-800 dark:text-slate-200 font-medium whitespace-nowrap">{skill}</span>
+                </div>
+              ))}
+            </motion.div>
+            
+            {/* Line 2 (Reversed direction) */}
+            <motion.div
+              className="flex gap-6 pr-6 w-max"
+              animate={{ x: ["-50%", "0%"] }}
+              transition={{ repeat: Infinity, ease: "linear", duration: 95 }}
+            >
+              {[...allSkills].reverse().concat([...allSkills].reverse(), [...allSkills].reverse()).map((skill, idx) => (
+                <div key={`l2-${idx}`} className="flex-shrink-0 flex items-center gap-3 bg-white/[0.05] border border-white/10 rounded-xl px-6 py-4 shadow-lg hover:border-indigo-500/50 hover:bg-white/[0.1] transition-colors">
+                  <span className="text-3xl text-slate-800 dark:text-white">
+                    {iconMap[skill] || <span className="w-2 h-2 bg-slate-600 rounded-full inline-block"></span>}
+                  </span>
+                  <span className="text-slate-800 dark:text-slate-200 font-medium whitespace-nowrap">{skill}</span>
+                </div>
+              ))}
+            </motion.div>
+            
+            {/* Line 3 */}
+            <motion.div
+              className="flex gap-6 pr-6 w-max"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{ repeat: Infinity, ease: "linear", duration: 110 }}
+            >
+              {[...allSkills].sort().concat([...allSkills].sort(), [...allSkills].sort()).map((skill, idx) => (
+                <div key={`l3-${idx}`} className="flex-shrink-0 flex items-center gap-3 bg-white/[0.05] border border-white/10 rounded-xl px-6 py-4 shadow-lg hover:border-indigo-500/50 hover:bg-white/[0.1] transition-colors">
                   <span className="text-3xl text-slate-800 dark:text-white">
                     {iconMap[skill] || <span className="w-2 h-2 bg-slate-600 rounded-full inline-block"></span>}
                   </span>

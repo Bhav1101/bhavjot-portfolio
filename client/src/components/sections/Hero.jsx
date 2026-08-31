@@ -36,13 +36,18 @@ const Hero = () => {
         
         {/* Text Content */}
         <div className="flex-1 flex flex-col gap-6">
-          <motion.div variants={itemVariants}>
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-2">
-              Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">{name.split(' ')[0]}</span>
-            </h1>
-            <h2 className="text-2xl md:text-3xl text-slate-300 font-medium leading-snug">
-              {title}
-            </h2>
+          <motion.div variants={itemVariants} className="flex flex-col md:flex-row md:items-center gap-6">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-indigo-500 shadow-[0_0_20px_rgba(99,102,241,0.5)] shrink-0">
+               <img src="/profile.png" alt="Bhavjot Singh" className="w-full h-full object-cover bg-slate-800" />
+            </div>
+            <div>
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-2">
+                Greetings, I'm <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">{name}</span>
+              </h1>
+              <h2 className="text-xl md:text-2xl text-slate-300 font-medium leading-snug">
+                {title}
+              </h2>
+            </div>
           </motion.div>
           
           <motion.p variants={itemVariants} className="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed border-l-4 border-indigo-500 pl-4 py-1">
