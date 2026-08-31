@@ -18,19 +18,21 @@ const Certifications = () => {
             className="glass rounded-2xl overflow-hidden flex flex-col hover:shadow-[0_0_30px_rgba(99,102,241,0.2)] hover:border-indigo-500/50 transition-all duration-300"
           >
             
-            {cert.image && (
-              <div className="relative w-full h-48 bg-slate-200 dark:bg-slate-800/50 flex items-center justify-center border-b border-slate-300 dark:border-white/10">
+            {(cert.image || cert.link) && (
+              <div className="relative w-full h-56 bg-slate-200 dark:bg-slate-800/50 flex items-center justify-center border-b border-slate-300 dark:border-white/10 overflow-hidden group-hover:h-64 transition-all duration-300">
                 <span className="text-slate-500 font-medium flex flex-col items-center gap-2">
                   <FaCertificate className="text-3xl text-slate-400 dark:text-slate-600" />
-                  Certificate Image
+                  Certificate Document
                 </span>
-                <img
-                  src={cert.image}
-                  alt={cert.name}
-                  className="absolute inset-0 w-full h-full object-cover hidden"
-                  onError={(e) => e.target.style.display = 'none'}
-                  onLoad={(e) => e.target.style.display = 'block'}
-                />
+                {cert.image && (
+                  <img
+                    src={cert.image}
+                    alt={cert.name}
+                    className="absolute inset-0 w-full h-full object-cover hidden"
+                    onError={(e) => e.target.style.display = 'none'}
+                    onLoad={(e) => e.target.style.display = 'block'}
+                  />
+                )}
               </div>
             )}
             
