@@ -58,13 +58,13 @@ export const cvData = {
     {
       degree: "B.Tech CSE Lateral Entry",
       institution: "Lovely Professional University (LPU)",
-      period: "2026-2029",
+      period: "2026 - Present",
       details: "Semester 3"
     },
     {
       degree: "Diploma CSE",
       institution: "Lovely Professional University (LPU)",
-      period: "2026",
+      period: "2024 - 2026",
       details: "CGPA 9.08"
     }
   ]
