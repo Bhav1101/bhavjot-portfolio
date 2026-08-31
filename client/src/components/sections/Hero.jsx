@@ -72,7 +72,6 @@ const Hero = () => {
             <motion.div variants={itemVariants} className="flex flex-wrap justify-center md:justify-start gap-4 mt-2">
               <a href={github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-2.5 bg-slate-800 text-slate-200 font-semibold rounded-full hover:bg-slate-700 transition-all shadow-lg"><SiGithub className="text-lg" /> GitHub</a>
               <a href={linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-2.5 bg-[#0a66c2] text-white font-semibold rounded-full hover:bg-[#004182] transition-all shadow-lg"><FaLinkedin className="text-lg" /> LinkedIn</a>
-              <a href={`mailto:${email}`} className="flex items-center gap-2 px-5 py-2.5 border border-slate-700 text-slate-200 font-semibold rounded-full hover:bg-slate-800 transition-all"><HiMail className="text-lg" /> Email</a>
             </motion.div>
           </div>
 
