@@ -124,7 +124,7 @@ const Hero = () => {
                   `  "stack": ["React", "Node.js", "Express", "MongoDB"],`,
                   `  "hobbies": ["Cybersecurity", "Problem Solving", "Open Source"]`
                 ].map((line, i) => (
-                  <motion.div key={i} variants={{ hidden: { opacity: 0, y: 5 }, visible: { opacity: 1, y: 0 } }}>
+                  <motion.div key={i} variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } } }}>
                     {line}
                   </motion.div>
                 ))}
