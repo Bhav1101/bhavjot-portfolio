@@ -78,7 +78,6 @@ const Hero = () => {
 
           {/* Larger Standalone Profile Picture on Right */}
           <motion.div variants={itemVariants} className="w-56 h-56 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-500/50 shadow-[0_0_40px_rgba(99,102,241,0.4)] shrink-0 relative group flex justify-center items-center">
-             <div className="absolute inset-0 bg-indigo-500/20 group-hover:bg-transparent transition-all duration-300"></div>
              <img src="/profile.png" alt="Bhavjot Singh" className="w-full h-full object-cover bg-slate-800 group-hover:scale-105 transition-transform duration-500" />
           </motion.div>
 
