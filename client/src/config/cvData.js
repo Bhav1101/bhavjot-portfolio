@@ -44,7 +44,8 @@ export const cvData = {
     {
       name: "MERN Stack Development",
       issuer: "O7 Services",
-      image: "/cert-mern.png"
+      image: "/cert-mern.png",
+      link: "/O7_Services_MERN_Certificate.pdf"
     },
     {
       name: "Python Programming",

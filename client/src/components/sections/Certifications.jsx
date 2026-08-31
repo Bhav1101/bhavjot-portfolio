@@ -34,11 +34,23 @@ const Certifications = () => {
               </div>
             )}
             
-            <div className="p-6">
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{cert.name}</h3>
-              <p className="text-indigo-600 dark:text-indigo-400 font-medium">{cert.issuer}</p>
-              {cert.duration && (
-                <p className="text-slate-500 mt-2 text-sm">{cert.duration}</p>
+            <div className="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{cert.name}</h3>
+                <p className="text-indigo-600 dark:text-indigo-400 font-medium">{cert.issuer}</p>
+                {cert.duration && (
+                  <p className="text-slate-500 mt-2 text-sm">{cert.duration}</p>
+                )}
+              </div>
+              {cert.link && (
+                <a 
+                  href={cert.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="mt-6 inline-block w-full text-center px-4 py-2 bg-indigo-600/10 hover:bg-indigo-600/20 text-indigo-400 font-semibold rounded-lg transition-colors border border-indigo-500/20"
+                >
+                  View Certificate
+                </a>
               )}
             </div>
             
