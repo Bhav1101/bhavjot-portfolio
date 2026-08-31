@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { FaSun, FaMoon } from 'react-icons/fa';
+import { ThemeContext } from '../../App.jsx';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,12 +24,15 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${scrolled ? 'top-2' : 'top-6'}`}>
-      <div className="backdrop-blur-xl bg-white/[0.05] border border-white/10 shadow-[0_0_20px_rgba(0,0,0,0.5)] rounded-full px-6 py-3 flex gap-6 items-center">
+      <div className="glass rounded-full px-6 py-3 flex gap-6 items-center">
         {links.map(link => (
-          <a key={link.name} href={link.href} className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
+          <a key={link.name} href={link.href} className="text-sm font-medium text-slate-800 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors">
             {link.name}
           </a>
         ))}
+        <button onClick={toggleTheme} className="ml-4 p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-800 dark:text-slate-300">
+          {theme === 'dark' ? <FaSun size={18} /> : <FaMoon size={18} />}
+        </button>
       </div>
     </nav>
   );
