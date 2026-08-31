@@ -3,11 +3,27 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-text: #1e293b;
+  }
+  .dark {
+    --glass-bg: rgba(15, 23, 42, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-text: #f8fafc;
+  }
   html {
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-[#030014] text-slate-200 font-sans overflow-x-hidden;
+    @apply bg-slate-50 dark:bg-[#030014] text-slate-900 dark:text-slate-200 font-sans overflow-x-hidden transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-[var(--glass-bg)] backdrop-blur-lg border border-[var(--glass-border)] shadow-lg;
   }
 }
 
