@@ -3,7 +3,7 @@ import Navbar from './Navbar.jsx';
 
 const Layout = ({ children }) => {
   return (
-    <div className="min-h-screen bg-[#030014] text-slate-100 font-sans selection:bg-indigo-500/30 selection:text-indigo-200 relative overflow-hidden">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#030014] text-slate-900 dark:text-slate-100 font-sans selection:bg-indigo-500/30 selection:text-indigo-200 relative overflow-hidden">
       <Navbar />
       
       {/* Background ambient gradients */}
