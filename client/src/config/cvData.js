@@ -6,6 +6,7 @@ export const cvData = {
     github: "https://github.com/Bhav1101",
     linkedin: "https://linkedin.com/in/bhavjot-singh-933849336",
     email: "Bhavjot360@gmail.com",
+    phone: "+91 7814104345",
   },
   stats: [
     { label: "MERN Experience", value: "6 Months" },

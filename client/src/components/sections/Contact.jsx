@@ -61,9 +61,12 @@ const Contact = () => {
       <div className="max-w-2xl mx-auto relative z-10 p-8 md:p-12">
         <div className="text-center mb-10">
           <h2 className="text-4xl font-extrabold mb-4 text-white">Let's connect</h2>
-          <p className="text-slate-400">
+          <p className="text-slate-400 mb-6">
             I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
           </p>
+          <a href="tel:+917814104345" className="inline-flex items-center gap-2 px-6 py-2.5 bg-indigo-900/30 border border-indigo-500/30 hover:bg-indigo-600/20 hover:border-indigo-500/50 transition-all rounded-full text-indigo-300 font-semibold shadow-lg">
+            <span>📞</span> +91 7814104345
+          </a>
         </div>
 
         <form onSubmit={onSubmit} className="space-y-6">
